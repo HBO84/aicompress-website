@@ -1,0 +1,224 @@
+/* --- CHARTE GRAPHIQUE --- */
+:root {
+    --dark-blue: #0a192f;
+    --light-dark-blue: #112240;
+    --light-text: #ccd6f6;
+    --white-text: #ffffff;
+    --accent-color: #64ffda;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* --- RESET & GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--light-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--white-text);
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; }
+h3 { font-size: 1.5rem; }
+
+section {
+    padding: 6rem 0;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--light-dark-blue);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white-text);
+    font-family: var(--font-title);
+    font-weight: 600;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--light-text);
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1.5rem auto 2.5rem;
+}
+
+.cta-button {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.screenshot-container {
+    margin-top: 4rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, var(--light-dark-blue), #0d284d);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+.screenshot-img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* --- FEATURES SECTION --- */
+.features-section {
+    background-color: var(--light-dark-blue);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: var(--dark-blue);
+    padding: 2rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+/* --- HOW IT WORKS SECTION --- */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    font-family: var(--font-title);
+}
+
+/* --- DOWNLOAD SECTION --- */
+.download-section {
+    text-align: center;
+}
+
+.large-button {
+    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+}
+
+.small-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    background-color: var(--light-dark-blue);
+}
+
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE --- */
+@media(max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
